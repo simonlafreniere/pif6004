@@ -27,7 +27,7 @@ def process_img(image):
     image[yellow_mask != 0] = [255,255,255]
     # convert to gray
     processed_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    # edge detection
+    # lanes detection
     processed_img =  cv2.Canny(processed_img, threshold1 = 200, threshold2= 300)
     vertices = np.array([[0,460],[0,230],[300,150],[475,150],[800,230],[800,460]], np.int32)
     processed_img = cv2.GaussianBlur(processed_img,(5,5),0)
