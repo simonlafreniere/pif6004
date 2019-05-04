@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import os
 import time
+from directkeys import PressKey, W, A, S, D
 
 """
 All coordinates assume a screen resolution of 1366x768, and Chrome 
@@ -54,6 +55,7 @@ def screenGrab():
     last_time = time.time()
     box = (x_pad+1, y_pad+1, x_pad+805, y_pad+461)
     while(True):
+        #PressKey(W)
         screen =  np.array(ImageGrab.grab(box))
         print('loop took {} seconds'.format(time.time()-last_time))
         last_time = time.time()
