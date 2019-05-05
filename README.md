@@ -16,3 +16,8 @@ Space bar to use handbrake
 Après le ROI et HoughLines
 
 ![](image/Screen%20Shot%2005-03-19%20at%2001.49%20PM.PNG)
+
+
+Apres avoir trouvé la voie a prendre
+
+![](image/Screen%20Shot%2005-05-19%20at%2010.52%20AM%20002.PNG)
