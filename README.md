@@ -21,3 +21,7 @@ Après le ROI et HoughLines
 Apres avoir trouvé la voie a prendre
 
 ![](image/Screen%20Shot%2005-05-19%20at%2010.52%20AM%20002.PNG)
+
+Ballade a St-Valere un beau dimanche apres midi
+
+![](image/Screen%20Shot%2005-05-19%20at%2003.29%20PM.PNG)
