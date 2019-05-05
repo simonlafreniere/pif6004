@@ -25,3 +25,7 @@ Apres avoir trouvé la voie a prendre
 Ballade a St-Valere un beau dimanche apres midi
 
 ![](image/Screen%20Shot%2005-05-19%20at%2003.29%20PM.PNG)
+
+Vidéo sur Youtube
+
+https://www.youtube.com/watch?v=k4qQmYr_Fq0
