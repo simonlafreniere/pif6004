@@ -269,16 +269,18 @@ def right():
     ReleaseKey(W)
     ReleaseKey(D)
 
-def slow_ya_roll():
+def release():
     ReleaseKey(W)
     ReleaseKey(A)
     ReleaseKey(D)
+    ReleaseKey(S)
 
 def brake():
+    PressKey(S)
     ReleaseKey(A)
     ReleaseKey(W)
     ReleaseKey(D)
-	#add spaceBar key
+	#add spaceBar key for hand brake
 
 def screenGrab(): 
     last_time = time.time()
