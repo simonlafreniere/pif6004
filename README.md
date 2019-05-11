@@ -29,3 +29,8 @@ Ballade a St-Valere un beau dimanche apres midi
 Vidéo sur Youtube
 
 https://www.youtube.com/watch?v=k4qQmYr_Fq0
+
+
+Object detection avec resnet50 et imageAI
+
+![](image/MODERN_CAR_RACING_resnet50.jpg)
