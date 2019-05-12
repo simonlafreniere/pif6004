@@ -33,15 +33,11 @@ for data in train_data:
         print('no matches')
 
 
-do_nothings = do_nothings[:len(lefts)][:len(rights)]
-lefts = lefts[:len(do_nothings)]
-rights = rights[:len(do_nothings)]
-
 forwards = forwards[:len(lefts)][:len(rights)]
 lefts = lefts[:len(forwards)]
 rights = rights[:len(forwards)]
 
-final_data = do_nothings + forwards + lefts + rights + brakes
+final_data = forwards + lefts + rights + brakes
 shuffle(final_data)
 
-np.save('training_data_v2.npy', final_data)
+np.save('training_data_v3.npy', final_data)

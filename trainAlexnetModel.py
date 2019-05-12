@@ -8,7 +8,7 @@ EPOCHS = 8
 MODEL_NAME = 'MODERN-CAR-RACING-{}-{}-{}-epochs.model'.format(LR, 'alexnet',EPOCHS)
 
 model = alexnet(WIDTH, HEIGHT, LR)
-train_data = np.load('training_data_v2.npy')
+train_data = np.load('training_data_v3.npy')
 
 train = train_data[:-500]
 test = train_data[-500:]

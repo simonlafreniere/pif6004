@@ -1,7 +1,7 @@
 import numpy as np
 from PIL import ImageGrab
 import cv2
-import time
+from time import sleep
 from directkeys import PressKey,ReleaseKey, W, A, S, D
 from alexnet import alexnet
 
@@ -28,23 +28,20 @@ model = alexnet(WIDTH, HEIGHT, LR)
 model.load(MODEL_NAME)
 
 def straight():
-    print('straight')
     PressKey(W)
-    sleep(0.2)
+    sleep(2)
     ReleaseKey(W)
     ReleaseKey(A)
     ReleaseKey(D)
     ReleaseKey(S)
 
 def release():
-    print('release')
     ReleaseKey(W)
     ReleaseKey(A)
     ReleaseKey(D)
     ReleaseKey(S)
 	
 def brake():
-    print('brake')
     PressKey(X)
     sleep(0.1)
     ReleaseKey(X)
@@ -56,26 +53,28 @@ def brake():
 def main():
 
     box = (x_pad+1, y_pad+1, x_pad+805, y_pad+461)
-	
+    i = 0
     while(True):
         screen =  np.array(ImageGrab.grab(box))
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80,46))
-        cv2.imshow('',screen)
+        #cv2.imshow('',screen)
         moves = list(np.around(model.predict([screen.reshape(80,46,1)])[0]))
-        print(moves)
-
+		
         if moves == [1,0,0,0]:
-            print('left')
+            print(f'left  {i}:')
             left()
+            print(moves)
         elif moves == [0,1,0,0]:
-            print('straight')
+            print(f'straight  {i}:')
             straight()
+            print(moves)
         elif moves == [0,0,1,0]:
-            print('right')
+            print(f'right {i}:')
             right()
-        elif moves == [0,0,0,0]:
-            print('do nothing')
+            print(moves)
+
+        i += 1
 
         if cv2.waitKey(25) & 0xFF == ord('q'):
             cv2.destroyAllWindows()
