@@ -4,6 +4,7 @@ from time import sleep
 import numpy as np
 from PIL import ImageGrab, Image
 from pynput.keyboard import Key, Controller, Listener
+import pynput.keyboard as pynput_keyboard
 
 keyboard = Controller
 quit_now = False
@@ -76,7 +77,7 @@ def screen_grab():
 
 
 def on_press(key):
-    if key == 'q':
+    if key == pynput_keyboard.KeyCode.from_char('q'):
         global quit_now
         quit_now = True
 
