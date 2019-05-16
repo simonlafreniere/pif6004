@@ -4,8 +4,13 @@ import cv2
 import os
 # import time
 from pynput.keyboard import Key, Listener
+import pynput.keyboard as keyboard
 import threading
 
+import argparse
+
+parser = argparse.ArgumentParser(description="check which user..")
+parser.add_argument("-u", "--user", nargs=1)
 
 '''
 All coordinates assume a screen resolution of 1366x768, and Chrome 
@@ -34,6 +39,7 @@ x_pad_decal = 0
 y_pad_decal = 0
 
 output = [0, 0, 0, 0]
+quit_now = False
 
 
 def initialisation():
@@ -46,18 +52,20 @@ def initialisation():
 
 def on_press(key):
     global output
+    global quit_now
 
-    if key == 'q':
-        global quit_now
+    if key == keyboard.KeyCode.from_char('q'):
         quit_now = True
-    elif key == Key.up or key == 'w':
+    elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
         output[1] = 1
-    elif key == Key.down or key == Key.space or key == 's':
+    elif key == Key.down or key == Key.space or key == keyboard.KeyCode.from_char('s'):
         output[3] = 1
-    elif key == Key.right or key == 'd':
+    elif key == Key.right or key == keyboard.KeyCode.from_char('d'):
         output[0] = 1
-    elif key == Key.left or key == 'a':
+    elif key == Key.left or key == keyboard.KeyCode.from_char('a'):
         output[3] = 1
+
+    test=""
 
 
 def listener_thread():
@@ -65,8 +73,22 @@ def listener_thread():
     with Listener(on_press=on_press) as listener:
         listener.join()
 
+def initialisation():
+    global x_pad, y_pad, x_pad_decal, y_pad_decal
+    args = parser.parse_args()
+    if args.user is None or args.user[0] == 'p':
+        x_pad = x_pad_pat
+        y_pad = y_pad_pat
+        x_pad_decal = x_pad_decal_pat
+        y_pad_decal = y_pad_decal_pat
+    elif args.user[0] == 's':
+        x_pad = x_pad_sim
+        y_pad = y_pad_sim
+        x_pad_decal = x_pad_decal_sim
+        y_pad_decal = y_pad_decal_sim
 
 def main():
+    initialisation()
     global output
 
     # threading the keyboard listener
@@ -93,7 +115,6 @@ def main():
         
         if quit_now:
             cv2.destroyAllWindows()
-
             break
 
         if len(training_data) % 500 == 0:
