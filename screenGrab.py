@@ -8,6 +8,11 @@ from numpy.linalg import lstsq
 from pynput.keyboard import Key, Controller
 from statistics import mean
 
+import argparse
+
+parser = argparse.ArgumentParser(description="check which user..")
+parser.add_argument("-u", "--user", nargs=1)
+
 '''
 All coordinates assume a screen resolution of 1366x768, and Chrome 
 maximized with the Bookmarks Toolbar enabled.
@@ -19,7 +24,8 @@ Play area =  x_pad+1, y_pad+1, x_pad+805, y_pad+461
 
 # Globals
 # ------------------
- 
+user = None
+
 x_pad_pat = 271
 y_pad_pat = 236
 x_pad_decal_pat = x_pad_pat + 805
@@ -306,10 +312,18 @@ def screen_grab():
 
 def initialisation():
     global x_pad, y_pad, x_pad_decal, y_pad_decal
-    x_pad = x_pad_pat
-    y_pad = y_pad_pat
-    x_pad_decal = x_pad_decal_pat
-    y_pad_decal = y_pad_decal_pat
+    args = parser.parse_args()
+    if args.user is None or args.user[0] == 'p':
+        x_pad = x_pad_pat
+        y_pad = y_pad_pat
+        x_pad_decal = x_pad_decal_pat
+        y_pad_decal = y_pad_decal_pat
+    elif args.user[0] == 's':
+        x_pad = x_pad_sim
+        y_pad = y_pad_sim
+        x_pad_decal = x_pad_decal_sim
+        y_pad_decal = y_pad_decal_sim
+
 
 
 def main():
