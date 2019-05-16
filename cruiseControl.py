@@ -1,4 +1,6 @@
 import re
+import threading
+
 import cv2
 from time import sleep
 import numpy as np
@@ -82,10 +84,15 @@ def on_press(key):
         quit_now = True
 
 
-def main():
+def listener_thread():
     # Collect events until released
     with Listener(on_press=on_press) as listener:
         listener.join()
+
+
+def main():
+    # threading the keyboard listener
+    threading.Thread(target=listener_thread).start()
     screen_grab()
 
 

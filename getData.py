@@ -115,6 +115,7 @@ def main():
         
         if quit_now:
             cv2.destroyAllWindows()
+            print('interruption keyboard')
             break
 
         if len(training_data) % 500 == 0:
