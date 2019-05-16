@@ -4,6 +4,8 @@ import cv2
 import os
 # import time
 from pynput.keyboard import Key, Listener
+import threading
+
 
 '''
 All coordinates assume a screen resolution of 1366x768, and Chrome 
@@ -48,22 +50,27 @@ def on_press(key):
     if key == 'q':
         global quit_now
         quit_now = True
-    elif key == Key.up:
+    elif key == Key.up or key == 'w':
         output[1] = 1
-    elif key == Key.down or key == Key.space:
+    elif key == Key.down or key == Key.space or key == 's':
         output[3] = 1
-    elif key == Key.right:
+    elif key == Key.right or key == 'd':
         output[0] = 1
-    elif key == Key.left:
+    elif key == Key.left or key == 'a':
         output[3] = 1
+
+
+def listener_thread():
+    # Collect events until released
+    with Listener(on_press=on_press) as listener:
+        listener.join()
 
 
 def main():
     global output
 
-    # Collect events until released
-    with Listener(on_press=on_press) as listener:
-        listener.join()
+    # threading the keyboard listener
+    threading.Thread(target=listener_thread).start()
 
     file_name = 'training_data.npy'
 
@@ -86,6 +93,7 @@ def main():
         
         if quit_now:
             cv2.destroyAllWindows()
+
             break
 
         if len(training_data) % 500 == 0:

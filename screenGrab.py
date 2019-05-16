@@ -7,6 +7,7 @@ from numpy import ones,vstack
 from numpy.linalg import lstsq
 from pynput.keyboard import Key, Controller
 from statistics import mean
+from time import sleep
 
 import argparse
 
@@ -271,16 +272,19 @@ def draw_lanes(img, lines, color=[0, 255, 255], thickness=3):
 
 def left():
     keyboard.press(Key.left)
+    sleep(0.1)
     keyboard.release(Key.left)
 
 
 def right():
     keyboard.press(Key.right)
+    sleep(0.1)
     keyboard.release(Key.right)
 
 
 def brake():
     keyboard.press(Key.down)
+    sleep(0.1)
     keyboard.release(Key.down)
 
 
@@ -288,7 +292,6 @@ def screen_grab():
     last_time = time.time()
     box = (x_pad+1, y_pad+1, x_pad_decal, y_pad_decal)
     while True:
-        # PressKey(W)
         screen = np.array(ImageGrab.grab(box))
         print('loop took {} seconds'.format(time.time()-last_time))
         last_time = time.time()

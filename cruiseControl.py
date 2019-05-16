@@ -31,7 +31,6 @@ def brake():
 def screen_grab():
     box = (327, 300, 328, 360)
     kernel = np.ones((5, 5), np.uint8)
-    # bad_chars = '()0'
     speed = 0.0
     last_speed = 0.0
     while True:
