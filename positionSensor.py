@@ -1,7 +1,11 @@
 import cv2
 import numpy as np
 
-def getPosition(img):
+def crop(image):
+    return image[170:,:]
+
+def getPosition(image):
+    img = crop(image)
     # Convert BGR to HSV
     hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
     # define range of blue color in HSV
@@ -17,10 +21,8 @@ def getPosition(img):
     thresh = cv2.threshold(blurred, 65, 255, cv2.THRESH_BINARY)[1]
     thresh = cv2.dilate(thresh, None, iterations=8)
     thresh = cv2.erode(thresh, None, iterations=2)
-
     # calculate moments of binary image
     M = cv2.moments(thresh)
-
     # calculate x,y coordinate of center
     cX = int(M["m10"] / M["m00"])
     cY = int(M["m01"] / M["m00"])
