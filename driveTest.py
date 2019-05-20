@@ -8,6 +8,7 @@ import os
 
 from time import sleep
 from pynput.keyboard import Key, Controller
+import threading
 
 """
 All coordinates assume a screen resolution of 1366x768, and Chrome 
@@ -28,24 +29,38 @@ positionX = 400
 positionY = 155
 
 keyboard = Controller
+right_pressed = False
+left_pressed = False
 
 
 def right():
+    global right_pressed
+    right_pressed = True
+
+    # make sure we don't fight between threads
+    keyboard.release(Key.left)
     keyboard.press(Key.right)
     sleep(0.1)
     keyboard.release(Key.right)
 
+    right_pressed = False
+
 
 def left():
+    global left_pressed
+    left_pressed = True
+
+    keyboard.release(Key.right)
     keyboard.press(Key.left)
     sleep(0.1)
     keyboard.release(Key.left)
 
+    left_pressed = False
+
 
 def forward():
+    keyboard.release(Key.down)
     keyboard.press(Key.up)
-    # sleep(0.1)
-    # keyboard.release(Key.right)
 
 
 def release():
@@ -54,6 +69,8 @@ def release():
 
 
 def brake():
+    # make sure we don't accelerate anymore..
+    keyboard.release(Key.up)
     keyboard.press(Key.down)
     sleep(0.1)
     keyboard.release(Key.down)
@@ -66,14 +83,16 @@ while True:
     # traffic = getTraffic(img)
 
     if lane1 < 0 and lane2 < 0:
-        right()
+        if not right_pressed:
+            threading.Thread(target=right).start()
     elif lane1 > 0 and lane2 > 0:
-        left()
+        if not left_pressed:
+            threading.Thread(target=left).start()
     else:
         if speed < 15:
             forward()
         if speed > 20:
             release()
         if speed > 25:
-            brake()
+            threading.Thread(target=brake).start()
 
