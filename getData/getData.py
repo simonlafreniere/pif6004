@@ -28,26 +28,15 @@ x_pad_pat = 271
 y_pad_pat = 236
 x_pad_decal_pat = x_pad_pat + 805
 y_pad_decal_pat = y_pad_pat + 461
-x_pad_sim = 230
-y_pad_sim = 350
-x_pad_decal_sim = x_pad_sim + 1676
-y_pad_decal_sim = y_pad_sim + 912
+x_pad_sim = 77
+y_pad_sim = 168
+x_pad_decal_sim = x_pad_sim + 917
+y_pad_decal_sim = y_pad_sim + 546
 
 x_pad = 0
 y_pad = 0
 x_pad_decal = 0
 y_pad_decal = 0
-
-output = [0, 0, 0, 0]
-quit_now = False
-
-
-def initialisation():
-    global x_pad, y_pad, x_pad_decal, y_pad_decal
-    x_pad = x_pad_pat
-    y_pad = y_pad_pat
-    x_pad_decal = x_pad_decal_pat
-    y_pad_decal = y_pad_decal_pat
 
 
 def on_press(key):
@@ -58,8 +47,8 @@ def on_press(key):
         print('\ninterruption keyboard..')
         cv2.destroyAllWindows()
         exit(0)
-    elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
-        output[1] = 1
+    # elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
+    #    output[1] = 1
     elif key == Key.down or key == Key.space or key == keyboard.KeyCode.from_char('s'):
         output[3] = 1
     elif key == Key.right or key == keyboard.KeyCode.from_char('d'):
@@ -102,7 +91,7 @@ def main():
     global training_data
     if os.path.isfile(file_name):
         print('File exists, loading previous data!')
-        training_data = list(np.load(file_name))
+        training_data = list(np.load(file_name, allow_pickle=True))
     else:
         print('File does not exist, starting fresh!')
         training_data = []
