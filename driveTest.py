@@ -30,9 +30,9 @@ while(True):
     lane1,lane2 = findLanes(img)
     #traffic = getTraffic(img)
 
-    if m1 < 0 and m2 < 0:
+    if lane1 < 0 and lane2 < 0:
         right()
-    elif m1 > 0 and m2 > 0:
+    elif lane1 > 0 and lane2 > 0:
         left()
     else:
         if(speed<15):
