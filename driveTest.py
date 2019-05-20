@@ -27,25 +27,25 @@ box = (x_pad+1, y_pad+1, x_pad+805, y_pad+461)
 positionX = 400
 positionY = 155
 
-keyboard = Controller
+keyboard = Controller()
 
 
 def right():
     keyboard.press(Key.right)
-    sleep(0.1)
+    sleep(0.07)
     keyboard.release(Key.right)
 
 
 def left():
     keyboard.press(Key.left)
-    sleep(0.1)
+    sleep(0.07)
     keyboard.release(Key.left)
 
 
 def forward():
     keyboard.press(Key.up)
-    # sleep(0.1)
-    # keyboard.release(Key.right)
+    sleep(0.05)
+    keyboard.release(Key.right)
 
 
 def release():
@@ -55,7 +55,7 @@ def release():
 
 def brake():
     keyboard.press(Key.down)
-    sleep(0.1)
+    sleep(0.05)
     keyboard.release(Key.down)
 
 
@@ -70,10 +70,10 @@ while True:
     elif lane1 > 0 and lane2 > 0:
         left()
     else:
-        if speed < 15:
+        if speed < 10:
             forward()
-        if speed > 20:
+        if speed > 12:
             release()
-        if speed > 25:
+        if speed > 20:
             brake()
 
