@@ -1,5 +1,5 @@
 from speedSensor import getSpeed
 
-while(True):
+while True:
     speed = getSpeed()
     print(speed)
