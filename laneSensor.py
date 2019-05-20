@@ -5,7 +5,6 @@ import os
 import time
 from numpy import ones,vstack
 from numpy.linalg import lstsq
-from directkeys import PressKey, ReleaseKey, W, A, S, D
 from statistics import mean
 
 """
@@ -39,13 +38,12 @@ def process_img(image):
     (T, seg) = cv2.threshold(processed_img, 200, 255, cv2.THRESH_BINARY)
     processed_img =  cv2.Canny(seg, threshold1 = 400, threshold2=500)
     processed_img = cv2.GaussianBlur(processed_img,(5,5),0)
-    processed_img = cv2.dilate(processed_img, kernel, iterations=5)
-    #vertices = np.array([[10,500],[10,300],[300,200],[500,200],[800,300],[800,500]], np.int32)
+    processed_img = cv2.dilate(processed_img, kernel, iterations=3)
     vertices = np.array([[140,431],[385,150],[430,150],[590,431]], np.int32)
     processed_img = roi(processed_img, [vertices])
     # more info: http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html
     #                                     rho   theta   thresh  min length, max gap:        
-    lines = cv2.HoughLinesP(processed_img, 1, np.pi/180, 180,      20,       15)
+    lines = cv2.HoughLinesP(processed_img, 1, np.pi/180, 180,      10,       80)
     m1 = 0
     m2 = 0
     try:
