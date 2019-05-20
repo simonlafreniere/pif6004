@@ -86,7 +86,7 @@ def main():
     initialisation()
 
     global file_name
-    file_name = 'training_data_sim.npy'
+    file_name = 'training_data.npy'
 
     global training_data
     if os.path.isfile(file_name):
