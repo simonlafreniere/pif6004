@@ -55,8 +55,9 @@ def on_press(key):
     output = [0, 0, 0, 0]
 
     if key == keyboard.KeyCode.from_char('q'):
-        print('interruption keyboard')
-        return
+        print('\ninterruption keyboard..')
+        cv2.destroyAllWindows()
+        exit(0)
     elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
         output[1] = 1
     elif key == Key.down or key == Key.space or key == keyboard.KeyCode.from_char('s'):
@@ -66,20 +67,15 @@ def on_press(key):
     elif key == Key.left or key == keyboard.KeyCode.from_char('a'):
         output[3] = 1
 
-    screen = np.array(ImageGrab.grab(box))
-    screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
-    screen = cv2.resize(screen, (80, 46))
-    training_data.append([screen, output])
+    if output != [0, 0, 0, 0]:
+        screen = np.array(ImageGrab.grab(box))
+        screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+        screen = cv2.resize(screen, (80, 46))
+        training_data.append([screen, output])
 
-    if len(training_data) % 500 == 0:
-        print(len(training_data))
-        np.save(file_name, training_data)
-
-
-def listener_thread():
-    # Collect events until released
-    with Listener(on_press=on_press) as listener:
-        listener.join()
+        if len(training_data) % 500 == 0:
+            print(len(training_data))
+            np.save(file_name, training_data)
 
 
 def initialisation():
@@ -117,9 +113,6 @@ def main():
     # Collect events until released
     with Listener(on_press=on_press) as listener:
         listener.join()
-
-    cv2.destroyAllWindows()
-    exit(0)
 
 
 if __name__ == '__main__':
