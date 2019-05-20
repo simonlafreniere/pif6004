@@ -6,7 +6,8 @@ from time import sleep
 import numpy as np
 from PIL import ImageGrab, Image
 
-def getSpeed():
+
+def get_speed():
     box = (327, 300, 328, 360)
     kernel = np.ones((5, 5), np.uint8)
     speed = 0.0
@@ -29,8 +30,9 @@ def getSpeed():
                 index = float(str_index)
                 speed = abs((index - 44)*1.45)
             except ValueError as e:
-                print()#do nothing
+                print(e)  # do nothing
     return speed
+
 
 def main():
     print('speedSensor')

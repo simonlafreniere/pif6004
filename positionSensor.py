@@ -1,10 +1,12 @@
 import cv2
 import numpy as np
 
-def crop(image):
-    return image[170:,:]
 
-def getPosition(image):
+def crop(image):
+    return image[170:, :]
+
+
+def get_position(image):
     img = crop(image)
     # Convert BGR to HSV
     hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
@@ -22,15 +24,17 @@ def getPosition(image):
     thresh = cv2.dilate(thresh, None, iterations=8)
     thresh = cv2.erode(thresh, None, iterations=2)
     # calculate moments of binary image
-    M = cv2.moments(thresh)
+    m = cv2.moments(thresh)
     # calculate x,y coordinate of center
-    cX = int(M["m10"] / M["m00"])
-    cY = int(M["m01"] / M["m00"])
+    c_x = int(m["m10"] / m["m00"])
+    c_y = int(m["m01"] / m["m00"])
 
-    return cX,cY
+    return c_x, c_y
+
 
 def main():
     print('positionSensor')
+
 
 if __name__ == '__main__':
     main()
