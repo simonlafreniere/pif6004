@@ -24,7 +24,7 @@ y_pad = 264
 height = 431
 width = 756
 
-def process_img(image):
+def findLanes(image):
     kernel = np.ones((5,5), np.uint8)
     original_image = image
     # convert yellow lines to white lines
@@ -63,7 +63,7 @@ def process_img(image):
     except Exception as e:
         print(str(e)+ "ERROR 3")
         pass
-    return processed_img,original_image, m1, m2
+    return m1, m2
 
 
 def roi(img, vertices):
@@ -105,7 +105,7 @@ def draw_lanes(img, lines, color=[0, 255, 255], thickness=3):
                 x_coords = (xyxy[0],xyxy[2])
                 y_coords = (xyxy[1],xyxy[3])
                 A = vstack([x_coords,ones(len(x_coords))]).T
-                m, b = lstsq(A, y_coords)[0]
+                m, b = lstsq(A, y_coords,rcond=-1)[0]
 
                 # Calculating our new, and improved, xs
                 x1 = (min_y-b) / m
@@ -255,24 +255,9 @@ def draw_lanes(img, lines, color=[0, 255, 255], thickness=3):
         print(str(e))
 
 
-def screenGrab(): 
-    last_time = time.time()
-    box = (x_pad+1, y_pad+1, x_pad+756, y_pad+431)
-    while(True):
-        #PressKey(W)
-        screen =  np.array(ImageGrab.grab(box))
-        print('loop took {} seconds'.format(time.time()-last_time))
-        last_time = time.time()
-        new_screen,original_image, m1, m2 = process_img(screen)
-        cv2.imshow('window',cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB))
-		
-		
-        if cv2.waitKey(25) & 0xFF == ord('q'):
-            cv2.destroyAllWindows()
-            break
  
 def main():
-    screenGrab()
+    print('laneSensor')
  
 if __name__ == '__main__':
     main()
