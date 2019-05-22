@@ -1,5 +1,6 @@
 from PIL import ImageGrab
 import numpy as np
+import settings
 import cv2
 import os
 import time
@@ -7,22 +8,8 @@ from numpy import ones,vstack
 from numpy.linalg import lstsq
 from statistics import mean
 
-"""
-All coordinates assume a screen resolution of 1366x768, and Chrome 
-maximized with the Bookmarks Toolbar enabled.
-
-x_pad = 271
-y_pad = 236
-Play area =  x_pad+1, y_pad+1, x_pad+805, y_pad+461
-"""
-
-# Globals
-# ------------------
- 
-x_pad = 277
-y_pad = 264
-height = 431
-width = 756
+width = settings.width
+height = settings.height
 
 def findLanes(image):
     kernel = np.ones((5,5), np.uint8)
@@ -39,7 +26,7 @@ def findLanes(image):
     processed_img =  cv2.Canny(seg, threshold1 = 400, threshold2=500)
     processed_img = cv2.GaussianBlur(processed_img,(5,5),0)
     processed_img = cv2.dilate(processed_img, kernel, iterations=3)
-    vertices = np.array([[140,431],[385,150],[430,150],[590,431]], np.int32)
+    vertices = np.array([[0,height],[int(width/2)-int(width*0.1),int(height/2)],[int(width/2)+int(width*0.1),int(height/2)],[width,height]], np.int32)
     processed_img = roi(processed_img, [vertices])
     # more info: http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html
     #                                     rho   theta   thresh  min length, max gap:        

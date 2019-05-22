@@ -6,7 +6,7 @@ from time import sleep
 import numpy as np
 from PIL import ImageGrab, Image
 
-def getSpeed():
+def getSpeed(lastSpeed):
     box = (327, 300, 328, 360)
     kernel = np.ones((5, 5), np.uint8)
     speed = 0.0
@@ -23,13 +23,19 @@ def getSpeed():
     dilation = cv2.dilate(edges, kernel, iterations=5)
     erosion = cv2.erode(dilation, kernel, iterations=6)
     for index, x in np.ndenumerate(erosion):
-        if x == 255:
-            try:
-                str_index = re.sub('[(),0]', '', str(index))
-                index = float(str_index)
-                speed = abs((index - 44)*1.45)
-            except ValueError as e:
-                print()#do nothing
+        if(x == 255):
+                try:
+                    index = re.sub('[(),0]', '', str(index))
+                    index = float(index)
+                    speed = abs((index - 44)*1.45)
+                    if(abs(speed - lastSpeed) < 20):
+                        return speed
+                    else:
+                        return lastSpeed
+                except ValueError as e:
+                    pass
+
+
     return speed
 
 def main():
