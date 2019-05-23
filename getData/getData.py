@@ -5,7 +5,6 @@ import os
 # import time
 from pynput.keyboard import Key, Listener
 import pynput.keyboard as keyboard
-import threading
 
 import argparse
 
@@ -26,28 +25,17 @@ Play area =  x_pad+1, y_pad+1, x_pad+805, y_pad+461
  
 x_pad_pat = 271
 y_pad_pat = 236
-x_pad_decal_pat = x_pad_pat + 805
-y_pad_decal_pat = y_pad_pat + 461
-x_pad_sim = 230
-y_pad_sim = 350
-x_pad_decal_sim = x_pad_sim + 1676
-y_pad_decal_sim = y_pad_sim + 912
+width_pat = x_pad_pat + 805
+height_pat = y_pad_pat + 461
+x_pad_sim = 77
+y_pad_sim = 168
+width_sim = x_pad_sim + 917
+height_sim = y_pad_sim + 546
 
 x_pad = 0
 y_pad = 0
-x_pad_decal = 0
-y_pad_decal = 0
-
-output = [0, 0, 0, 0]
-quit_now = False
-
-
-def initialisation():
-    global x_pad, y_pad, x_pad_decal, y_pad_decal
-    x_pad = x_pad_pat
-    y_pad = y_pad_pat
-    x_pad_decal = x_pad_decal_pat
-    y_pad_decal = y_pad_decal_pat
+width = 0
+height = 0
 
 
 def on_press(key):
@@ -79,18 +67,18 @@ def on_press(key):
 
 
 def initialisation():
-    global x_pad, y_pad, x_pad_decal, y_pad_decal
+    global x_pad, y_pad, width, height
     args = parser.parse_args()
     if args.user is None or args.user[0] == 'p':
         x_pad = x_pad_pat
         y_pad = y_pad_pat
-        x_pad_decal = x_pad_decal_pat
-        y_pad_decal = y_pad_decal_pat
+        width = width_pat
+        height = height_pat
     elif args.user[0] == 's':
         x_pad = x_pad_sim
         y_pad = y_pad_sim
-        x_pad_decal = x_pad_decal_sim
-        y_pad_decal = y_pad_decal_sim
+        width = width_sim
+        height = height_sim
 
 
 def main():
@@ -108,7 +96,7 @@ def main():
         training_data = []
 
     global box
-    box = (x_pad+1, y_pad+1, x_pad_decal, y_pad_decal)
+    box = (x_pad+1, y_pad+1, width, height)
 
     # Collect events until released
     with Listener(on_press=on_press) as listener:

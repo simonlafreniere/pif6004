@@ -1,6 +1,6 @@
-from laneSensor import findLanes
+from laneSensor import find_lanes
 # from proximitySensor import getTraffic
-from speedSensor import getSpeed
+from speedSensor import get_speed
 from PIL import ImageGrab
 import numpy as np
 import settings
@@ -10,15 +10,31 @@ from time import sleep
 from pynput.keyboard import Key, Controller
 import threading
 
-x_pad = settings.x_pad
-y_pad = settings.y_pad
-width = settings.width
-height = settings.height
-box = (x_pad + 1, y_pad + 1, x_pad + width, y_pad + height)
+import argparse
+
+parser = argparse.ArgumentParser(description="check which user..")
+parser.add_argument("-u", "--user", nargs=1)
+
+x_pad_pat = 271
+y_pad_pat = 236
+width_pat = x_pad_pat + 805
+height_pat = y_pad_pat + 461
+x_pad_sim = 77
+y_pad_sim = 166
+width_sim = x_pad_sim + 917
+height_sim = y_pad_sim + 546
+
+x_pad = 0
+y_pad = 0
+width = 0
+height = 0
+
+
 keyboard = Controller()
 right_pressed = False
 left_pressed = False
 forward_pressed = False
+
 
 def right():
     global right_pressed
@@ -48,7 +64,7 @@ def left():
 def forward():
     global forward_pressed
     forward_pressed = True
-	
+
     keyboard.release(Key.down)
     keyboard.press(Key.up)
     sleep(0.4)
@@ -68,14 +84,32 @@ def brake():
     keyboard.release(Key.down)
 
 
+def initialisation():
+    global x_pad, y_pad, width, height
+    args = parser.parse_args()
+    if args.user is None or args.user[0] == 'p':
+        x_pad = x_pad_pat
+        y_pad = y_pad_pat
+        width = width_pat
+        height = height_pat
+    elif args.user[0] == 's':
+        x_pad = x_pad_sim
+        y_pad = y_pad_sim
+        width = width_sim
+        height = height_sim
+    global box
+    box = (x_pad + 1, y_pad + 1, x_pad + width, y_pad + height)
+
+
 def main():
+    initialisation()
     last_speed = 0
 
     while True:
         img = np.array(ImageGrab.grab(box))
-        speed = getSpeed(last_speed)
+        speed = get_speed(last_speed)
         last_speed = speed
-        lane1, lane2 = findLanes(img)
+        lane1, lane2 = find_lanes(img, height, width)
         # traffic = getTraffic(img)
 
         if lane1 < 0 and lane2 < 0:
