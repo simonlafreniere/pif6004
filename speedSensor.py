@@ -25,7 +25,6 @@ def getSpeed(lastSpeed):
     for index, x in np.ndenumerate(erosion):
         if(x == 255):
                 try:
-                    #index = re.sub('[(),0]', '', str(index))
                     index = float(index[0])
                     speed = abs((index - 44)*1.45)
                     if(abs(speed - lastSpeed) < 20):
