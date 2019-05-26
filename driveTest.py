@@ -19,6 +19,7 @@ keyboard = Controller()
 right_pressed = False
 left_pressed = False
 forward_pressed = False
+brake_pressed = False
 
 def right():
     global right_pressed
@@ -61,10 +62,12 @@ def release():
 
 
 def brake():
+    global brake_pressed
+    brake_pressed = True
     # make sure we don't accelerate anymore..
     keyboard.release(Key.up)
     keyboard.press(Key.down)
-    sleep(0.01)
+    sleep(0.2)
     keyboard.release(Key.down)
 
 
@@ -90,7 +93,6 @@ def main():
             if speed > 30:
                 release()
             if speed > 40:
-                brake()
                 threading.Thread(target=brake).start()
 
 
