@@ -1,4 +1,4 @@
-from laneSensor import find_lanes
+from laneSensor import pipeline
 # from proximitySensor import getTraffic
 from speedSensor import get_speed
 from PIL import ImageGrab
@@ -109,13 +109,13 @@ def main():
         img = np.array(ImageGrab.grab(box))
         speed = get_speed(last_speed)
         last_speed = speed
-        lane1, lane2 = find_lanes(img, height, width)
+        lane1 = pipeline(img)
         # traffic = getTraffic(img)
 
-        if lane1 < 0 and lane2 < 0:
+        if lane1 < 0:
             if not right_pressed:
                 threading.Thread(target=right).start()
-        elif lane1 > 0 and lane2 > 0:
+        elif lane1 > 0:
             if not left_pressed:
                 threading.Thread(target=left).start()
         else:

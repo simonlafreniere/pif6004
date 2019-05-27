@@ -23,14 +23,14 @@ Play area =  x_pad+1, y_pad+1, x_pad+805, y_pad+461
 # Globals
 # ------------------
  
-x_pad_pat = 271
-y_pad_pat = 236
-width_pat = x_pad_pat + 805
-height_pat = y_pad_pat + 461
-x_pad_sim = 77
-y_pad_sim = 168
-width_sim = x_pad_sim + 917
-height_sim = y_pad_sim + 546
+x_pad_pat = 299
+y_pad_pat = 195
+width_pat = 1162
+height_pat = 707
+x_pad_sim = 213
+y_pad_sim = 137
+width_sim = 1175
+height_sim = 737
 
 x_pad = 0
 y_pad = 0
@@ -43,11 +43,11 @@ def on_press(key):
     output = [0, 0, 0, 0]
 
     if key == keyboard.KeyCode.from_char('q'):
-        print('\ninterruption keyboard..')
+        print('\ninterruption keyboard (quitter)..')
         cv2.destroyAllWindows()
         exit(0)
-    elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
-        output[1] = 1
+    # elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
+    #     output[1] = 1
     elif key == Key.down or key == Key.space or key == keyboard.KeyCode.from_char('s'):
         output[3] = 1
     elif key == Key.right or key == keyboard.KeyCode.from_char('d'):
