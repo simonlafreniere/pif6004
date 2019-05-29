@@ -15,14 +15,14 @@ import argparse
 parser = argparse.ArgumentParser(description="check which user..")
 parser.add_argument("-u", "--user", nargs=1)
 
-x_pad_pat = 271
-y_pad_pat = 236
-width_pat = x_pad_pat + 805
-height_pat = y_pad_pat + 461
-x_pad_sim = 77
-y_pad_sim = 166
-width_sim = x_pad_sim + 917
-height_sim = y_pad_sim + 546
+x_pad_pat = 299
+y_pad_pat = 195
+width_pat = 1162 - x_pad_pat
+height_pat = 707 - y_pad_pat
+x_pad_sim = 213
+y_pad_sim = 137
+width_sim = 1175 - x_pad_sim
+height_sim = 737 - y_pad_sim
 
 x_pad = 0
 y_pad = 0
