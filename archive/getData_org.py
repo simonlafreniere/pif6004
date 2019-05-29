@@ -20,7 +20,7 @@ Play area =  x_pad+1, y_pad+1, x_pad+805, y_pad+461
 x_pad = 271
 y_pad = 236
 box = (x_pad+1, y_pad+1, x_pad+805, y_pad+461)
-screen =  np.array(ImageGrab.grab(box))
+screen = None
 
 def keys_to_output(keys):
     '''
@@ -30,6 +30,7 @@ def keys_to_output(keys):
 	
     '''
     output = [0,0,0,0]
+    global screen
     
     if 'A' in keys:
         output[0] = 1
@@ -52,7 +53,7 @@ def keys_to_output(keys):
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80,46))
 
-    return output
+    return screen,output
 
 
 def main():
@@ -68,15 +69,15 @@ def main():
 	
     while(True):
         keys = key_check()
-        output = keys_to_output(keys)
-		if(output != [0,0,0,0])
+        screen,output = keys_to_output(keys)
+        if(output != [0,0,0,0]):
             training_data.append([screen,output])
         
         if cv2.waitKey(25) & 0xFF == ord('q'):
             cv2.destroyAllWindows()
             break
 
-        if len(training_data) % 500 == 0:
+        if len(training_data) % 100 == 0 and len(training_data) != 0:
             print(len(training_data))
             np.save(file_name,training_data)
 

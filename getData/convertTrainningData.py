@@ -3,7 +3,7 @@ import scipy.misc
 import numpy as np
 
 train_data = np.load('training_data_balanced.npy')
-path = "./train_images"
+path = "./Modern_Car_Racing/train"
 forward = 0
 brake = 0
 left = 0
