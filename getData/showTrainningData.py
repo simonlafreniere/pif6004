@@ -5,8 +5,8 @@ import pandas as pd
 from collections import Counter
 from random import shuffle
 
-balanced_train_data = np.load('training_data_v3.npy')
-train_data = np.load('training_data_sim.npy')
+balanced_train_data = np.load('training_data_balanced.npy')
+train_data = np.load('training_data.npy')
 df = pd.DataFrame(train_data)
 bdf = pd.DataFrame(balanced_train_data)
 print('-----------------data-------------------------')

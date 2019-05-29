@@ -40,4 +40,4 @@ rights = rights[:len(forwards)]
 final_data = forwards + lefts + rights + brakes
 shuffle(final_data)
 
-np.save('training_data_v3.npy', final_data)
+np.save('training_data_balanced.npy', final_data)
