@@ -41,10 +41,10 @@ def main():
             scipy.misc.imsave(path + '/right/p.' + str(right) + user + '.jpeg', i[0])
             right += 1
         if i[1] == [0, 0, 0, 1]:
-            scipy.misc.imsave(path + '/brake/p.' + str(brake) + '.jpeg', i[0])
+            scipy.misc.imsave(path + '/brake/p.' + str(brake) + user + '.jpeg', i[0])
             brake += 1
         if i[1] == [0, 1, 0, 0]:
-            scipy.misc.imsave(path + '/forward/p.' + str(forward) + '.jpeg', i[0])
+            scipy.misc.imsave(path + '/forward/p.' + str(forward) + user + '.jpeg', i[0])
             forward += 1
 
     with open('convert_config.json', 'w') as outfile:
