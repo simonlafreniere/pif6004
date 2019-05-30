@@ -2,13 +2,12 @@ import os
 import scipy.misc
 import numpy as np
 
-train_data = np.load('training_data_balanced.npy')
+train_data = np.load('training_data_balanced.npy', allow_pickle=True)
 path = "./Modern_Car_Racing/train"
-forward = 0
-brake = 0
-left = 0
-right = 0
-
+forward = 5000
+brake = 5000
+left = 5000
+right = 5000
 
 
 for i in train_data:
