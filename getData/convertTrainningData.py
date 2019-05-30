@@ -26,6 +26,11 @@ for i in train_data:
     if(i[1] == [0,1,0,0]):
         scipy.misc.imsave(path + '/forward/p.' + str(forward)  + '.jpeg', i[0])
         forward +=1
+		
+data['forward'] = forward
+data['brake'] = brake
+data['left'] = left
+data['right'] = right
 
 with open('convert_config.json', 'w') as outfile:
     json.dump(data, outfile)		
