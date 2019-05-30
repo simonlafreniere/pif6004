@@ -15,6 +15,10 @@ user = None
 def random_noise(image_array: ndarray):
     # add random noise to the image
     return sk.util.random_noise(image_array)
+	
+def horizontal_flip(image_array: ndarray):
+    # horizontal flip doesn't need skimage, it's easy as flipping the image array of pixels !
+    return image_array[:, ::-1]
 
 def initialisation():
     global user
@@ -49,6 +53,10 @@ def main():
             scipy.misc.imsave(path + '/brake/' + str(brake) + user + '.jpeg', i[0])
             noised = random_noise(i[0])
             scipy.misc.imsave(path + '/brake/' + str(brake) + user + '.noised.jpeg', noised)
+            #hf_image = horizontal_flip(i[0])
+            #hf_noised = horizontal_flip(noised)
+            #scipy.misc.imsave(path + '/brake/' + str(brake) + user + '.hf.jpeg', hf_image)
+            #scipy.misc.imsave(path + '/brake/' + str(brake) + user + '.hf.noised.jpeg', hf_noised)			
             brake += 1
         if i[1] == [0, 1, 0, 0]:
             scipy.misc.imsave(path + '/forward/' + str(forward) + user + '.jpeg', i[0])
