@@ -24,7 +24,7 @@ def main():
 
     train_data = np.load('training_data_balanced.npy', allow_pickle=True)
     path = "./Modern_Car_Racing/train"
-    with open('convert_config.json') as json_data_file:
+    with open('convert_config.' + user +'.json') as json_data_file:
         data = json.load(json_data_file)
 
     forward = int(data['forward'])
@@ -46,12 +46,12 @@ def main():
             scipy.misc.imsave(path + '/forward/' + str(forward) + user + '.jpeg', i[0])
             forward += 1
 
-    data['forward'] = forward
-    data['brake'] = brake
-    data['left'] = left
-    data['right'] = right
+    data['forward'] = forward + 1
+    data['brake'] = brake + 1
+    data['left'] = left + 1
+    data['right'] = right + 1
 
-    with open('convert_config.json', 'w') as outfile:
+    with open('convert_config.' + user +'.json', 'w') as outfile:
         json.dump(data, outfile)
 
 
