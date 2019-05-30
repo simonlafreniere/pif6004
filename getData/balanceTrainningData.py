@@ -5,7 +5,7 @@ import pandas as pd
 from collections import Counter
 from random import shuffle
 
-train_data = np.load('training_data.npy')
+train_data = np.load('training_data.npy', allow_pickle=True)
 
 lefts = []
 rights = []

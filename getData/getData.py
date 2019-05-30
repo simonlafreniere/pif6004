@@ -28,18 +28,15 @@ x_pad_pat = 271
 y_pad_pat = 236
 x_pad_decal_pat = x_pad_pat + 805
 y_pad_decal_pat = y_pad_pat + 461
-x_pad_sim = 230
-y_pad_sim = 350
-x_pad_decal_sim = x_pad_sim + 1676
-y_pad_decal_sim = y_pad_sim + 912
+x_pad_sim = 150
+y_pad_sim = 311
+x_pad_decal_sim = 1980
+y_pad_decal_sim = 1338
 
 x_pad = 0
 y_pad = 0
 x_pad_decal = 0
 y_pad_decal = 0
-
-output = [0, 0, 0, 0]
-quit_now = False
 
 
 def initialisation():
@@ -60,20 +57,29 @@ def on_press(key):
         exit(0)
     elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
         output[1] = 1
-    elif key == Key.down or key == Key.space or key == keyboard.KeyCode.from_char('s'):
-        output[3] = 1
-    elif key == Key.right or key == keyboard.KeyCode.from_char('d'):
-        output[0] = 1
-    elif key == Key.left or key == keyboard.KeyCode.from_char('a'):
-        output[3] = 1
-
-    if output != [0, 0, 0, 0]:
         screen = np.array(ImageGrab.grab(box))
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80, 46))
+    elif key == Key.down or key == Key.space or key == keyboard.KeyCode.from_char('s'):
+        output[3] = 1
+        screen = np.array(ImageGrab.grab(box))
+        screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+        screen = cv2.resize(screen, (80, 46))
+    elif key == Key.right or key == keyboard.KeyCode.from_char('d'):
+        output[2] = 1
+        screen = np.array(ImageGrab.grab(box))
+        screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+        screen = cv2.resize(screen, (80, 46))
+    elif key == Key.left or key == keyboard.KeyCode.from_char('a'):
+        output[0] = 1
+        screen = np.array(ImageGrab.grab(box))
+        screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+        screen = cv2.resize(screen, (80, 46))
+
+    if output != [0, 0, 0, 0]:
         training_data.append([screen, output])
 
-        if len(training_data) % 500 == 0:
+        if len(training_data) % 100 == 0:
             print(len(training_data))
             np.save(file_name, training_data)
 
@@ -97,12 +103,12 @@ def main():
     initialisation()
 
     global file_name
-    file_name = 'training_data_sim.npy'
+    file_name = 'training_data.npy'
 
     global training_data
     if os.path.isfile(file_name):
         print('File exists, loading previous data!')
-        training_data = list(np.load(file_name))
+        training_data = list(np.load(file_name, allow_pickle=True))
     else:
         print('File does not exist, starting fresh!')
         training_data = []
