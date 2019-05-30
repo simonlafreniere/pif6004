@@ -1,4 +1,6 @@
-import os
+import random
+from scipy import ndarray
+import skimage as sk
 import os
 import json
 import scipy.misc
@@ -10,6 +12,9 @@ parser.add_argument("-u", "--user", nargs=1)
 
 user = None
 
+def random_noise(image_array: ndarray):
+    # add random noise to the image
+    return sk.util.random_noise(image_array)
 
 def initialisation():
     global user
@@ -42,6 +47,8 @@ def main():
             right += 1
         if i[1] == [0, 0, 0, 1]:
             scipy.misc.imsave(path + '/brake/' + str(brake) + user + '.jpeg', i[0])
+            noised = random_noise(i[0])
+            scipy.misc.imsave(path + '/brake/' + str(brake) + user + '.noised.jpeg', noised)
             brake += 1
         if i[1] == [0, 1, 0, 0]:
             scipy.misc.imsave(path + '/forward/' + str(forward) + user + '.jpeg', i[0])
