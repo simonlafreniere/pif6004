@@ -47,10 +47,10 @@ def main():
             scipy.misc.imsave(path + '/forward/' + str(forward) + user + '.jpeg', i[0])
             forward += 1
 
-    data['forward'] = forward + 1
-    data['brake'] = brake + 1
-    data['left'] = left + 1
-    data['right'] = right + 1
+    data['forward'] = forward
+    data['brake'] = brake
+    data['left'] = left
+    data['right'] = right
 
     with open('convert_config.' + user +'.json', 'w') as outfile:
         json.dump(data, outfile)
