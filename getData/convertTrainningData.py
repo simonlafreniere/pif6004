@@ -15,9 +15,9 @@ def initialisation():
     global user
     args = parser.parse_args()
     if args.user is None or args.user[0] == 'p':
-        user = 'pat'
+        user = 'p'
     elif args.user[0] == 's':
-        user = 'sim'
+        user = 's'
 
 
 def main():
@@ -35,17 +35,22 @@ def main():
 
     for i in train_data:
         if i[1] == [1, 0, 0, 0]:
-            scipy.misc.imsave(path + '/left/p.' + str(left) + user + '.jpeg', i[0])
+            scipy.misc.imsave(path + '/left/' + str(left) + user + '.jpeg', i[0])
             left += 1
         if i[1] == [0, 0, 1, 0]:
-            scipy.misc.imsave(path + '/right/p.' + str(right) + user + '.jpeg', i[0])
+            scipy.misc.imsave(path + '/right/' + str(right) + user + '.jpeg', i[0])
             right += 1
         if i[1] == [0, 0, 0, 1]:
-            scipy.misc.imsave(path + '/brake/p.' + str(brake) + user + '.jpeg', i[0])
+            scipy.misc.imsave(path + '/brake/' + str(brake) + user + '.jpeg', i[0])
             brake += 1
         if i[1] == [0, 1, 0, 0]:
-            scipy.misc.imsave(path + '/forward/p.' + str(forward) + user + '.jpeg', i[0])
+            scipy.misc.imsave(path + '/forward/' + str(forward) + user + '.jpeg', i[0])
             forward += 1
+
+        data['forward'] = forward
+        data['brake'] = brake
+        data['left'] = left
+        data['right'] = right
 
     with open('convert_config.json', 'w') as outfile:
         json.dump(data, outfile)
