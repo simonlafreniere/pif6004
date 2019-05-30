@@ -1,4 +1,5 @@
 import os
+import os
 import json
 import scipy.misc
 import numpy as np
@@ -54,6 +55,8 @@ def main():
     with open('convert_config.' + user +'.json', 'w') as outfile:
         json.dump(data, outfile)
 
-
+    os.remove("training_data.npy")
+	
+	
 if __name__ == '__main__':
     main()
