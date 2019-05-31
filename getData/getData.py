@@ -58,44 +58,44 @@ def on_press(key):
     elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
         output[1] = 1
         screen = np.array(ImageGrab.grab(box))
-        lower_yellow = np.array([160, 130, 0, 0], dtype="uint16")
-        upper_yellow = np.array([255, 255, 65, 0], dtype="uint16")
+        lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
+        upper_yellow = np.array([255, 255, 65, 255], dtype="uint16")
         yellow_mask = cv2.inRange(screen, lower_yellow, upper_yellow)
-        screen[yellow_mask != 0] = [255, 255, 255, 0]
+        screen[yellow_mask != 0] = [255, 255, 255, 255]
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80, 46))
     elif key == Key.down or key == Key.space or key == keyboard.KeyCode.from_char('s'):
         output[3] = 1
         screen = np.array(ImageGrab.grab(box))
-        lower_yellow = np.array([160, 130, 0, 0], dtype="uint16")
-        upper_yellow = np.array([255, 255, 65, 0], dtype="uint16")
+        lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
+        upper_yellow = np.array([255, 255, 65, 255], dtype="uint16")
         yellow_mask = cv2.inRange(screen, lower_yellow, upper_yellow)
-        screen[yellow_mask != 0] = [255, 255, 255, 0]
+        screen[yellow_mask != 0] = [255, 255, 255, 255]
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80, 46))
     elif key == Key.right or key == keyboard.KeyCode.from_char('d'):
         output[2] = 1
         screen = np.array(ImageGrab.grab(box))
-        lower_yellow = np.array([160, 130, 0, 0], dtype="uint16")
-        upper_yellow = np.array([255, 255, 65, 0], dtype="uint16")
+        lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
+        upper_yellow = np.array([255, 255, 65, 255], dtype="uint16")
         yellow_mask = cv2.inRange(screen, lower_yellow, upper_yellow)
-        screen[yellow_mask != 0] = [255, 255, 255, 0]
+        screen[yellow_mask != 0] = [255, 255, 255, 255]
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80, 46))
     elif key == Key.left or key == keyboard.KeyCode.from_char('a'):
         output[0] = 1
         screen = np.array(ImageGrab.grab(box))
-        lower_yellow = np.array([160, 130, 0, 0], dtype="uint16")
-        upper_yellow = np.array([255, 255, 65, 0], dtype="uint16")
+        lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
+        upper_yellow = np.array([255, 255, 65, 255], dtype="uint16")
         yellow_mask = cv2.inRange(screen, lower_yellow, upper_yellow)
-        screen[yellow_mask != 0] = [255, 255, 255, 0]
+        screen[yellow_mask != 0] = [255, 255, 255, 255]
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80, 46))
 
     if output != [0, 0, 0, 0]:
         training_data.append([screen, output])
 
-        if len(training_data) % 500 == 0:
+        if len(training_data) % 50 == 0:
             print(len(training_data))
             np.save(file_name, training_data)
 
