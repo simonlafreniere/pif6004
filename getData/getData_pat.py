@@ -17,17 +17,13 @@ Play area =  x_pad+1, y_pad+1, x_pad+805, y_pad+461
 # Globals
 # ------------------
  
-x_pad = 271
-y_pad = 406 #236
-box = (x_pad+1, y_pad+1, x_pad+805, y_pad+291)
+x_pad = 271 
+y_pad = 236 #236 changer crop 170px
+box = (x_pad+1, y_pad+1, x_pad+805, y_pad+461) #y_pad+461 changer crop 170px
 screen = None
-
-def crop(image):
-    return image[170:,:]
 
 def getScreen():
     screen =  np.array(ImageGrab.grab(box))
-    #screen = crop(screen)
     lower_yellow = np.array([160,130,0], dtype = "uint16")
     upper_yellow = np.array([255,255,65], dtype = "uint16")
     yellow_mask = cv2.inRange(screen, lower_yellow, upper_yellow)
