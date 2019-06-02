@@ -29,7 +29,7 @@ def getScreen():
     yellow_mask = cv2.inRange(screen, lower_yellow, upper_yellow)
     screen[yellow_mask != 0] = [255,255,255]
     screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
-    screen = cv2.resize(screen, (80,29))
+    screen = cv2.resize(screen, (80,46))
     return screen
 
 def keys_to_output(keys):
