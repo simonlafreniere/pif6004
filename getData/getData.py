@@ -55,7 +55,7 @@ def on_press(key):
         print('\ninterruption keyboard..')
         cv2.destroyAllWindows()
         exit(0)
-    elif key == Key.up or key == keyboard.KeyCode.from_char('w'):
+    elif key == Key.up or key:
         output[1] = 1
         screen = np.array(ImageGrab.grab(box))
         lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
