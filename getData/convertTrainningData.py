@@ -48,9 +48,13 @@ def main():
     for i in train_data:
         if i[1] == [1, 0, 0, 0]:
             scipy.misc.imsave(path + '/left/' + str(left) + user + '.jpeg', i[0])
+            noised = random_noise(i[0])
+            scipy.misc.imsave(path + '/left/' + str(brake) + user + '.noised.jpeg', noised)
             left += 1
         if i[1] == [0, 0, 1, 0]:
             scipy.misc.imsave(path + '/right/' + str(right) + user + '.jpeg', i[0])
+            noised = random_noise(i[0])
+            scipy.misc.imsave(path + '/right/' + str(brake) + user + '.noised.jpeg', noised)
             right += 1
         if i[1] == [0, 0, 0, 1]:
             scipy.misc.imsave(path + '/brake/' + str(brake) + user + '.jpeg', i[0])

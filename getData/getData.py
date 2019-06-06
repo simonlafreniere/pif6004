@@ -55,7 +55,7 @@ def on_press(key):
         print('\ninterruption keyboard..')
         cv2.destroyAllWindows()
         exit(0)
-    elif key == Key.up or key:
+    elif key == Key.up:
         output[1] = 1
         screen = np.array(ImageGrab.grab(box))
         lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
@@ -64,7 +64,7 @@ def on_press(key):
         screen[yellow_mask != 0] = [255, 255, 255, 255]
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80, 46))
-    elif key == Key.down or key == Key.space or key == keyboard.KeyCode.from_char('s'):
+    elif key == Key.down:
         output[3] = 1
         screen = np.array(ImageGrab.grab(box))
         lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
@@ -73,7 +73,7 @@ def on_press(key):
         screen[yellow_mask != 0] = [255, 255, 255, 255]
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80, 46))
-    elif key == Key.right or key == keyboard.KeyCode.from_char('d'):
+    elif key == Key.right:
         output[2] = 1
         screen = np.array(ImageGrab.grab(box))
         lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
@@ -82,7 +82,7 @@ def on_press(key):
         screen[yellow_mask != 0] = [255, 255, 255, 255]
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
         screen = cv2.resize(screen, (80, 46))
-    elif key == Key.left or key == keyboard.KeyCode.from_char('a'):
+    elif key == Key.left:
         output[0] = 1
         screen = np.array(ImageGrab.grab(box))
         lower_yellow = np.array([160, 130, 0, 255], dtype="uint16")
