@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ee82e7f-93a4-45d5-ae70-d021b2e342dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/getData/convert_config.s.json" beforeDir="false" afterPath="$PROJECT_DIR$/getData/convert_config.s.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getData/getData.py" beforeDir="false" afterPath="$PROJECT_DIR$/getData/getData.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,12 +25,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getData/convert_config.s.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getData/convertTrainningData.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -121,7 +121,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.convertTrainningData">
+  <component name="RunManager" selected="Python.getData">
     <configuration name="balanceTrainningData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pif6004" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -267,18 +267,19 @@
       <workItem from="1559339404632" duration="21000" />
       <workItem from="1559339457656" duration="9421000" />
       <workItem from="1559481535910" duration="1085000" />
-      <workItem from="1559598680145" duration="1435000" />
+      <workItem from="1559598680145" duration="1624000" />
+      <workItem from="1559775881362" duration="551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18299000" />
+    <option name="totallyTimeSpent" value="19039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28594506" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2907916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -316,8 +317,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pif6004$convertTrainningData.coverage" NAME="convertTrainningData Coverage Results" MODIFIED="1559608132989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
-    <SUITE FILE_PATH="coverage/pif6004$getData.coverage" NAME="getData Coverage Results" MODIFIED="1559607614076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
+    <SUITE FILE_PATH="coverage/pif6004$convertTrainningData.coverage" NAME="convertTrainningData Coverage Results" MODIFIED="1559776993844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
+    <SUITE FILE_PATH="coverage/pif6004$getData.coverage" NAME="getData Coverage Results" MODIFIED="1559775947826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
     <SUITE FILE_PATH="coverage/pif6004$showTrainningData.coverage" NAME="showTrainningData Coverage Results" MODIFIED="1559175016541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
     <SUITE FILE_PATH="coverage/pif6004$balanceTrainningData.coverage" NAME="balanceTrainningData Coverage Results" MODIFIED="1559175001065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
   </component>
@@ -339,60 +340,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/0s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/0s.jpeg" />
     <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/0p.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/forward/0s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/0s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/185s.noised.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/185s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/186s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/170s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/171s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/172s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/173s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/179s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/180s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/181s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/182s.noised.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/182s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/186s.noised.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/convert_config.p1.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/forward/0s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/0s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/185s.noised.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/185s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/186s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/170s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/171s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/172s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/173s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/179s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/180s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/181s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/182s.noised.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/182s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/brake/186s.noised.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/convert_config.p1.json" />
     <entry file="file://$PROJECT_DIR$/getData/balanceTrainningData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-111">
@@ -410,72 +377,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/365s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/364s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/363s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/360s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/358s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/346s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/321s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/307s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/301s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/297s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/239s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/238s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/135s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/119s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/116s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/325s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/right/332s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/right/44s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/378s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/365s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/364s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/363s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/360s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/358s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/346s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/321s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/307s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/301s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/297s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/239s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/238s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/135s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/119s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/116s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/325s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/right/332s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/right/44s.jpeg" />
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/378s.jpeg" />
     <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/394s.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/391s.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/388s.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/388s.jpeg" />
     <entry file="file:///anaconda3/envs/tf/lib/python2.7/site-packages/pynput/_util/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -485,16 +412,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/left/1288s.jpeg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/convertTrainningData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/getData/Modern_Car_Racing/train/forward/2502s.jpeg">
       <provider selected="true" editor-type-id="images" />
@@ -514,6 +431,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getData/convert_config.s.json">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getData/convertTrainningData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
