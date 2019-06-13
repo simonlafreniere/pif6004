@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ee82e7f-93a4-45d5-ae70-d021b2e342dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getData/convert_config.s.json" beforeDir="false" afterPath="$PROJECT_DIR$/getData/convert_config.s.json" afterDir="false" />
-    </list>
+    <list default="true" id="8ee82e7f-93a4-45d5-ae70-d021b2e342dc" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getData/getData.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="121">
@@ -25,7 +22,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getData/convert_config.s.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -269,12 +266,12 @@
       <workItem from="1559481535910" duration="1085000" />
       <workItem from="1559598680145" duration="1624000" />
       <workItem from="1559775881362" duration="1663000" />
-      <workItem from="1560380511527" duration="886000" />
+      <workItem from="1560380511527" duration="1258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21037000" />
+    <option name="totallyTimeSpent" value="21409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,7 +284,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2956381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -390,8 +386,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pif6004$convertTrainningData.coverage" NAME="convertTrainningData Coverage Results" MODIFIED="1560383737654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
-    <SUITE FILE_PATH="coverage/pif6004$getData.coverage" NAME="getData Coverage Results" MODIFIED="1560381685577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
+    <SUITE FILE_PATH="coverage/pif6004$convertTrainningData.coverage" NAME="convertTrainningData Coverage Results" MODIFIED="1560388756533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
+    <SUITE FILE_PATH="coverage/pif6004$getData.coverage" NAME="getData Coverage Results" MODIFIED="1560387742304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
     <SUITE FILE_PATH="coverage/pif6004$showTrainningData.coverage" NAME="showTrainningData Coverage Results" MODIFIED="1559175016541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
     <SUITE FILE_PATH="coverage/pif6004$balanceTrainningData.coverage" NAME="balanceTrainningData Coverage Results" MODIFIED="1559175001065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/getData" />
   </component>
@@ -502,6 +498,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/getData/convert_config.s.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/getData/getData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -511,9 +510,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getData/convert_config.s.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
