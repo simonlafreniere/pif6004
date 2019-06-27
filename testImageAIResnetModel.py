@@ -1,6 +1,7 @@
 from imageai.Prediction.Custom import CustomImagePrediction
 import os
 execution_path = os.getcwd()
+from skimage.color import rgb2gray
 import numpy as np
 from PIL import ImageGrab
 import cv2
@@ -77,9 +78,8 @@ def main():
         upper_yellow = np.array([255,255,65], dtype = "uint16")
         yellow_mask = cv2.inRange(screen, lower_yellow, upper_yellow)
         screen[yellow_mask != 0] = [255,255,255]
-        screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+        screen = np.stack([rgb2gray(screen[i]) for i in range(screen.shape[0])])
         screen = cv2.resize(screen, (80,46))
-        #screen = cv2.imread("8p.jpeg")
         predictionArray = predict_actions(screen)
 		
 
