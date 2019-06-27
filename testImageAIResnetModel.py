@@ -28,19 +28,25 @@ HEIGHT = 46
 
 def predict_actions(image):
 
-    result = [];
+    predictionArray = []
+    result = []
     prediction = CustomImagePrediction()
     prediction.setModelTypeAsResNet()
     prediction.setModelPath(os.path.join(execution_path, "./models/model_ex-007_acc-0.587639.h5"))
     prediction.setJsonPath(os.path.join(execution_path, "model_class.json"))
     prediction.loadModel(num_objects=4)
     predictions, probabilities = prediction.predictImage(image, result_count=4, input_type="array")
-
+    
     for eachPrediction, eachProbability in zip(predictions, probabilities):
-	    print(eachPrediction + ":" + eachProbability)
-	
-    #return result;
- 
+        predictionArray.append(eachPrediction + ":" + eachProbability)
+    
+    return predictionArray
+
+
+def analyzePrediction(predictionArray):
+    print("in analysePrediction")
+
+
 def left():
     PressKey(A)
     sleep(2)
@@ -81,8 +87,16 @@ def main():
         screen = np.stack([rgb2gray(screen[i]) for i in range(screen.shape[0])])
         screen = cv2.resize(screen, (80,46))
         predictionArray = predict_actions(screen)
-		
-
+        action = analyzePrediction(predictionArray)
+        if action == "forward":
+            forward()
+        if action == "left":
+            left()
+        if action == "right":
+            right()
+        if action == "brake":
+            brake()
+	
         if cv2.waitKey(25) & 0xFF == ord('q'):
             cv2.destroyAllWindows()
             break
