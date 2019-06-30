@@ -29,7 +29,6 @@ HEIGHT = 46
 def predict_actions(image):
 
     predictionArray = []
-    result = []
     prediction = CustomImagePrediction()
     prediction.setModelTypeAsResNet()
     prediction.setModelPath(os.path.join(execution_path, "./models/model_ex-007_acc-0.587639.h5"))
@@ -44,7 +43,10 @@ def predict_actions(image):
 
 
 def analyzePrediction(predictionArray):
-    print("in analysePrediction")
+    for eachPrediction in predictionArray:
+        prediction = eachPrediction.split(":")
+		
+    return prediction[0]
 
 
 def left():
