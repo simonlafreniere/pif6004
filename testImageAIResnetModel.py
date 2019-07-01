@@ -37,8 +37,9 @@ def predict_actions(image):
     predictions, probabilities = prediction.predictImage(image, result_count=4, input_type="array")
     
     for eachPrediction, eachProbability in zip(predictions, probabilities):
-        predictionArray.append(eachPrediction + ":" + eachProbability)
-    
+        predictionArray.append(eachPrediction + ":" + eachProbability)    
+        print(eachPrediction + ":" + eachProbability)    
+
     return predictionArray
 
 
