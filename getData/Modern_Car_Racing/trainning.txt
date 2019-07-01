@@ -1,0 +1,118 @@
+2261/2261 [==============================] - 3861s 2s/step - loss: 0.4712 - acc: 0.8114 - val_loss: 1.6461 - val_acc: 0.5743
+Epoch 8/30
+576/576 [==============================] - 250s 435ms/step - loss: 1.7385 - acc: 0.6043
+
+Epoch 00008: saving model to Modern_Car_Racing/models/model_ex-008_acc-0.604284.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.4069 - acc: 0.8359 - val_loss: 1.7385 - val_acc: 0.6043
+Epoch 9/30
+576/576 [==============================] - 251s 435ms/step - loss: 2.2825 - acc: 0.5759
+
+Epoch 00009: saving model to Modern_Car_Racing/models/model_ex-009_acc-0.575915.h5
+2261/2261 [==============================] - 3856s 2s/step - loss: 0.3407 - acc: 0.8660 - val_loss: 2.2825 - val_acc: 0.5759
+Epoch 10/30
+576/576 [==============================] - 250s 434ms/step - loss: 2.7068 - acc: 0.5939
+
+Epoch 00010: saving model to Modern_Car_Racing/models/model_ex-010_acc-0.593863.h5
+2261/2261 [==============================] - 3869s 2s/step - loss: 0.2671 - acc: 0.8947 - val_loss: 2.7068 - val_acc: 0.5939
+Epoch 11/30
+576/576 [==============================] - 250s 435ms/step - loss: 3.1219 - acc: 0.5612
+
+Epoch 00011: saving model to Modern_Car_Racing/models/model_ex-011_acc-0.561152.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.2015 - acc: 0.9229 - val_loss: 3.1219 - val_acc: 0.5612
+Epoch 12/30
+576/576 [==============================] - 252s 438ms/step - loss: 3.2547 - acc: 0.5808
+
+Epoch 00012: saving model to Modern_Car_Racing/models/model_ex-012_acc-0.580837.h5
+2261/2261 [==============================] - 3868s 2s/step - loss: 0.1516 - acc: 0.9414 - val_loss: 3.2547 - val_acc: 0.5808
+Epoch 13/30
+576/576 [==============================] - 251s 435ms/step - loss: 3.4529 - acc: 0.5968
+
+Epoch 00013: saving model to Modern_Car_Racing/models/model_ex-013_acc-0.596758.h5
+2261/2261 [==============================] - 3865s 2s/step - loss: 0.1121 - acc: 0.9585 - val_loss: 3.4529 - val_acc: 0.5968
+Epoch 14/30
+576/576 [==============================] - 251s 435ms/step - loss: 4.0759 - acc: 0.5830
+
+Epoch 00014: saving model to Modern_Car_Racing/models/model_ex-014_acc-0.583008.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.0431 - acc: 0.9872 - val_loss: 4.0759 - val_acc: 0.5830
+Epoch 15/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.1492 - acc: 0.5905
+
+Epoch 00015: saving model to Modern_Car_Racing/models/model_ex-015_acc-0.590534.h5
+2261/2261 [==============================] - 3866s 2s/step - loss: 0.0221 - acc: 0.9944 - val_loss: 4.1492 - val_acc: 0.5905
+Epoch 16/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.3382 - acc: 0.5872   
+
+Epoch 00016: saving model to Modern_Car_Racing/models/model_ex-016_acc-0.587205.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.0162 - acc: 0.9965 - val_loss: 4.3382 - val_acc: 0.5872
+Epoch 17/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.5277 - acc: 0.5794
+
+Epoch 00017: saving model to Modern_Car_Racing/models/model_ex-017_acc-0.579389.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.0122 - acc: 0.9976 - val_loss: 4.5277 - val_acc: 0.5794
+Epoch 18/30
+576/576 [==============================] - 252s 437ms/step - loss: 4.5261 - acc: 0.5847
+
+Epoch 00018: saving model to Modern_Car_Racing/models/model_ex-018_acc-0.584745.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.0094 - acc: 0.9982 - val_loss: 4.5261 - val_acc: 0.5847
+Epoch 19/30
+576/576 [==============================] - 253s 438ms/step - loss: 4.5209 - acc: 0.5859   
+
+Epoch 00019: saving model to Modern_Car_Racing/models/model_ex-019_acc-0.585902.h5
+2261/2261 [==============================] - 3868s 2s/step - loss: 0.0083 - acc: 0.9985 - val_loss: 4.5209 - val_acc: 0.5859
+Epoch 20/30
+576/576 [==============================] - 252s 437ms/step - loss: 4.5590 - acc: 0.5855
+
+Epoch 00020: saving model to Modern_Car_Racing/models/model_ex-020_acc-0.585468.h5
+2261/2261 [==============================] - 3867s 2s/step - loss: 0.0064 - acc: 0.9988 - val_loss: 4.5590 - val_acc: 0.5855
+Epoch 21/30
+576/576 [==============================] - 251s 435ms/step - loss: 4.5329 - acc: 0.5879   
+
+Epoch 00021: saving model to Modern_Car_Racing/models/model_ex-021_acc-0.587929.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.0061 - acc: 0.9989 - val_loss: 4.5329 - val_acc: 0.5879
+Epoch 22/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.5583 - acc: 0.5875
+
+Epoch 00022: saving model to Modern_Car_Racing/models/model_ex-022_acc-0.587495.h5
+2261/2261 [==============================] - 3866s 2s/step - loss: 0.0062 - acc: 0.9988 - val_loss: 4.5583 - val_acc: 0.5875
+Epoch 23/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.5804 - acc: 0.5872   
+
+Epoch 00023: saving model to Modern_Car_Racing/models/model_ex-023_acc-0.587205.h5
+2261/2261 [==============================] - 3867s 2s/step - loss: 0.0058 - acc: 0.9989 - val_loss: 4.5804 - val_acc: 0.5872
+Epoch 24/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.6047 - acc: 0.5856
+
+Epoch 00024: saving model to Modern_Car_Racing/models/model_ex-024_acc-0.585613.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.0056 - acc: 0.9990 - val_loss: 4.6047 - val_acc: 0.5856
+Epoch 25/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.5782 - acc: 0.5868   
+
+Epoch 00025: saving model to Modern_Car_Racing/models/model_ex-025_acc-0.586771.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.0055 - acc: 0.9990 - val_loss: 4.5782 - val_acc: 0.5868
+Epoch 26/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.6075 - acc: 0.5858   
+
+Epoch 00026: saving model to Modern_Car_Racing/models/model_ex-026_acc-0.585758.h5
+2261/2261 [==============================] - 3867s 2s/step - loss: 0.0055 - acc: 0.9990 - val_loss: 4.6075 - val_acc: 0.5858
+Epoch 27/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.5885 - acc: 0.5868   
+
+Epoch 00027: saving model to Modern_Car_Racing/models/model_ex-027_acc-0.586771.h5
+2261/2261 [==============================] - 3865s 2s/step - loss: 0.0053 - acc: 0.9990 - val_loss: 4.5885 - val_acc: 0.5868
+Epoch 28/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.5876 - acc: 0.5865   
+
+Epoch 00028: saving model to Modern_Car_Racing/models/model_ex-028_acc-0.586481.h5
+2261/2261 [==============================] - 3864s 2s/step - loss: 0.0052 - acc: 0.9992 - val_loss: 4.5876 - val_acc: 0.5865
+Epoch 29/30
+576/576 [==============================] - 251s 436ms/step - loss: 4.6043 - acc: 0.5862
+
+Epoch 00029: saving model to Modern_Car_Racing/models/model_ex-029_acc-0.586192.h5
+2261/2261 [==============================] - 3865s 2s/step - loss: 0.0054 - acc: 0.9990 - val_loss: 4.6043 - val_acc: 0.5862
+Epoch 30/30
+576/576 [==============================] - 250s 435ms/step - loss: 4.5592 - acc: 0.5878   
+
+Epoch 00030: saving model to Modern_Car_Racing/models/model_ex-030_acc-0.587784.h5
+2261/2261 [==============================] - 3863s 2s/step - loss: 0.0050 - acc: 0.9994 - val_loss: 4.5592 - val_acc: 0.5878
+weedee@weedee-rover:~$ 
+
