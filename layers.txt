@@ -374,7 +374,7 @@ Trainable params: 23,555,082
 Non-trainable params: 53,120
 ____________________________________________________________________________________________________
 Using Enhanced Data Generation
-Found 4000 images belonging to 4 classes.
-Found 800 images belonging to 4 classes.
-JSON Mapping for the model classes saved to  C:\Users\User\PycharmProjects\ImageAITest\pets\json\model_class.json
-Number of experiments (Epochs) :  100
+Found 6909 images belonging to 4 classes.
+Found 27128 images belonging to 4 classes.
+JSON Mapping for the model classes saved to  C:\Users\User\modern_car_racing\json\model_class.json
+Number of experiments (Epochs) :  30
